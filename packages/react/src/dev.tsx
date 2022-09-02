@@ -1,4 +1,4 @@
-/// <reference types="systemjs" />
+
 /**
  * 开发模式下的启动代码
  * 只能使用 Systemjs 来加载模块

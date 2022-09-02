@@ -5,6 +5,7 @@
 pnpm run dev
 
 # > origin =  http://localhost:8080
+# > bundle  =  http://localhost:8080/base-js-bricking.js
 # > package  =  http://localhost:8080/package.json
 ```
 开发模式下页面会先引入 `entry-chunk` 文件再引入 `devEntry-chunk` 来启动应用。`devEntry` 适合用来做一些简单的验证。
@@ -42,9 +43,6 @@ pnpm run build
 
 如果需要使用less定义样式，需要安装
 - `less`
-- `less-loader`
 
 如果需要使用sass定义样式，需要安装
 - `sass`
-- `sass-loader`
-

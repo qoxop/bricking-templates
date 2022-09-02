@@ -13,7 +13,7 @@
         "skipLibCheck": true,
         "noImplicitAny": false,
         "jsx": "react",
-        "typeRoots": ["node_modules/@types"]
+        "typeRoots": ["node_modules/@types", "node_modules/@bricking/runtime/global.d.ts"]
     },
     "exclude": [
         "node_modules",

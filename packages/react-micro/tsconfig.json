@@ -1,0 +1,24 @@
+{
+    "include": ["src/*", "global.d.ts"],
+    "exclude": ["node_module", "dist"],
+    "buildOptions": {
+      "verbose": true
+    },
+    "compilerOptions": {
+      "outDir": "dist",
+      "module": "ES6",
+      "moduleResolution": "Node",
+      "strict": true,
+      "declaration": false,
+      "noUnusedLocals": true,
+      "esModuleInterop": true,
+      "noImplicitAny": false,
+      "lib": ["ES2018", "dom"],
+      "target": "ES6",
+      "typeRoots": ["node_module/@types"],
+      "jsx": "react",
+      "paths": {
+        "counter": ["./src/counter/index.tsx"]
+      }
+    }
+  }
