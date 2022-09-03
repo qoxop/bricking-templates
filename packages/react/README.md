@@ -2,7 +2,7 @@
 
 ## 开发
 ```sh
-pnpm run dev
+yarn run dev
 
 # > origin =  http://localhost:8080
 # > bundle  =  http://localhost:8080/base-js-bricking.js
@@ -22,12 +22,12 @@ npx bricking create module
 
 ## 构建
 ```sh
-pnpm run build
+yarn run build
 ```
 
 ## 配置说明
 
-[👉 @bricking/base-builder 配置文档](https://www.github.com)
+[👉 @bricking/base-builder 配置文档](https://github.com/qoxop/bricking/blob/main/packages/base-builder/README.md)
 
 ## 自定义 package.json
 
@@ -41,8 +41,8 @@ pnpm run build
 
 ### 可选的依赖
 
-如果需要使用less定义样式，需要安装
+如需使用 less 编写样式，安装
 - `less`
 
-如果需要使用sass定义样式，需要安装
+如需使用 sass 编写样式，安装
 - `sass`
