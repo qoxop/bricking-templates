@@ -8,11 +8,11 @@ pnpm run dev
 # > bundle  =  http://localhost:8080/base-js-bricking.js
 # > package  =  http://localhost:8080/package.json
 ```
-开发模式下页面会先引入 `entry-chunk` 文件再引入 `devEntry-chunk` 来启动应用。`devEntry` 适合用来做一些简单的验证。
+开发模式下页面会先引入 `entry-chunk` 文件再引入 `devEntry-chunk` 来启动应用。`devEntry` 适合用来做一些简单的功能验证。
 
 如果你想完整测试整个基座包，建议另起一个微模块项目，然后以控制台打印出来的 JSON 地址进行配置。
 
-[👉 如何配置一个微模块项目?](https://www.github.com)
+[👉 如何配置一个微模块项目?](https://github.com/qoxop/bricking/blob/main/packages/bricking/README.md)
 
 ```sh
 # 输入一下命令，它会要求你填写一下必要信息

@@ -4,8 +4,8 @@ function createPromise<T = any>() {
   let resolve: (value: T | PromiseLike<T>) => void = null as any;
   let reject: (reason?: any) => void = null as any;
   const promise = new Promise<T>((rs, rj) => {
-      resolve = rs;
-      reject = rj
+    resolve = rs;
+    reject = rj
   });
   return { resolve, reject, promise }
 }
@@ -27,7 +27,7 @@ type ExecTasksReturn<T> = {
  */
 export async function execTasks<T>(tasks: T[], cb: (task: T) => Promise<any>, parallel = 10, ): Promise<ExecTasksReturn<T>> {
   const { promise, resolve } = createPromise<ExecTasksReturn<T>>();
-  
+
   let ps: ReturnType<typeof createPromise>;
 
   const results: Array<{result: any, task: T}> =[];
@@ -35,24 +35,24 @@ export async function execTasks<T>(tasks: T[], cb: (task: T) => Promise<any>, pa
   let count = 0;
   let handling = 0;
   for await (const task of tasks) {
-      count++;
-      handling++;
-      cb(task).then(result => {
-          results.push({ result, task });
-      }).catch(err => {
-          errors.push({ err, task })
-      }).finally(() => {
-          handling--;
-          if (handling === 0 && count === tasks.length) {
-              return resolve({ results, errors })
-          }
-          // @ts-ignore
-          ps && ps.resolve();
-      });
-      if (handling + 1 > parallel) {
-          ps = createPromise();
-          await ps.promise;
+    count++;
+    handling++;
+    cb(task).then(result => {
+      results.push({ result, task });
+    }).catch(err => {
+      errors.push({ err, task })
+    }).finally(() => {
+      handling--;
+      if (handling === 0 && count === tasks.length) {
+          return resolve({ results, errors })
       }
+      // @ts-ignore
+      ps && ps.resolve();
+    });
+    if (handling + 1 > parallel) {
+      ps = createPromise();
+      await ps.promise;
+    }
   }
   return await promise;
 }

@@ -1,11 +1,11 @@
 import { updateOptions } from '@bricking/base-builder';
 
 const isProdMode = process.env.NODE_ENV === 'production';
-// const publicPath = isProdMode ? `http://locahost:8080/` : 'http://locahost:8080/';
+const publicPath = isProdMode ? `http://locahost:8080/` : 'http://locahost:8080/';
 
 // 自行替换 publicPath
-const { version, name } = require('./package.json');
-const publicPath = isProdMode ? `https://files.qoxop.run/packages/${name}/${version}/` : 'http://locahost:8080/';
+// const { version, name } = require('./package.json');
+// const publicPath = isProdMode ? `https://your-cdn-host/packages/${name}/${version}/` : 'http://locahost:8080/';
 
 export default updateOptions({
   publicPath,

@@ -1,23 +1,18 @@
 import React from 'react';
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom';
 import { Counter } from 'counter';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-    max-width: 720px;
-    margin: 60px auto;
-    h2 {
-        text-align: center;
-        margin: 20px 0px;
-    }
-`
+import ReactLog from './react.svg'
+import './styles.less';
 
 const App = () => {
     return (
-        <Wrapper>
-            <h2>Bricking Micro-module Demo</h2>
+        <div className='app'>
+            <h2>Bricking React-Micro-Module</h2>
+            <div className='logo-box'>
+                <img src={ReactLog} className='logo' alt="" />
+            </div>
             <Counter />
-        </Wrapper>
+        </div>
     )
 }
 

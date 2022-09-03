@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
-import { Card, Row, Col, Button } from 'antd'
+import styles from './styles.module.less';
 
 const Counter:React.FC = () => {
   const [count, setCount] = useState(0);
   const increase = () => setCount(c => c + 1)
   const decrease = () => setCount(c => c - 1)
   return (
-    <Card title="counter">
-      <h2>{count}</h2>
-      <Row justify='center' align='middle' gutter={{ xs: 8, sm: 16, md: 24}}>
-          <Col>
-              <Button type='primary' onClick={increase}>increase</Button>
-          </Col>
-          <Col>
-          <Button type='ghost' danger onClick={decrease}>decrease</Button>
-          </Col>
-      </Row>
-    </Card>
+    <div className={styles.card}>
+      <div className={styles.title}>
+        counter
+      </div>
+      <div className={styles.content}>
+        <h2>{count}</h2>
+        <div className={styles.btn_group}>
+            <div>
+                <button onClick={increase}>increase</button>
+            </div>
+            <div>
+              <button onClick={decrease}>decrease</button>
+            </div>
+        </div>
+      </div>
+    </div>
   )
 }
+
 export {
   Counter
 } 
