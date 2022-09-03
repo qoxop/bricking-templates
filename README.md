@@ -7,5 +7,5 @@
 
 ## Micro Module
 
-- [ ] React
+- [x] React
 - [ ] Vue
