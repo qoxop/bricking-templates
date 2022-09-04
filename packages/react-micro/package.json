@@ -13,7 +13,7 @@
     "@types/react-dom": "18.0.6"
   },
   "devDependencies": {
-    "bricking": "0.4.7",
+    "bricking": "0.4.3",
     "less": "4.1.3"
   },
   "author": "",

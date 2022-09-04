@@ -20,5 +20,8 @@ export default defineBricking({
         limit: 10,
         filename: 'imgs/[hash][extname]'
     },
+    /**
+     * 基座包
+     */
     basePackage: 'https://files.qoxop.run/packages/base-react/1.0.2/package.json'
 })

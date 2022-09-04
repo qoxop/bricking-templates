@@ -1,7 +1,11 @@
 {
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "add-module": "bricking create module",
+    "add-base": "bricking create base"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bricking": "0.4.3"
+  }
 }
