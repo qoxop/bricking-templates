@@ -23,5 +23,5 @@ export default defineBricking({
     /**
      * 基座包
      */
-    basePackage: 'https://files.qoxop.run/packages/base-react/1.0.2/package.json'
+    basePackage: 'https://test.bricking.dev/base/react-base/package.json'
 })
