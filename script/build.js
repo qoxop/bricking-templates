@@ -20,7 +20,7 @@ fs.readdirSync(BasePackagesPath, 'utf-8').map(dir =>path.join(BasePackagesPath, 
       path.join(BaseDistPath, name)
     );
   } catch (error) {
-    console.warn('package.json no exists ~');
+    console.warn('package.json no exists ~!');
   }
 })
 
@@ -34,6 +34,6 @@ fs.readdirSync(ModulePackagesPath, 'utf-8').map(dir => path.join(ModulePackagesP
       path.join(ModuleDistPath, name)
     );
   } catch (error) {
-    console.warn('package.json no exists ~');
+    console.warn('package.json no exists ~!');
   }
 })
