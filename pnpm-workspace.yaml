@@ -1,3 +1,4 @@
 packages:
-  - 'packages/*'
+  - 'packages/base/*'
+  - 'packages/module/*'
   - '!dist/*'

@@ -1,8 +1,8 @@
 import { defineBricking } from 'bricking';
 
-const { version, name } = require('./package.json');
+const { name } = require('./package.json');
 const isProdMode = process.env.NODE_ENV === 'production';
-const publicPath = isProdMode ? `https://your-cdn-host/modules/${name}/${version}/` : '`http://localhost:3000/';
+const publicPath = isProdMode ? `${process.env.CDN_HOST}/module/${name}/` : '`http://localhost:3000/';
 
 export default defineBricking({
     entry: {

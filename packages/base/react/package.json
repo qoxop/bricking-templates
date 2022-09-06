@@ -1,5 +1,5 @@
 {
-  "name": "base-react",
+  "name": "react-base",
   "version": "1.0.3",
   "description": "基于 React 的基座包项目模版",
   "main": "src/index.ts",

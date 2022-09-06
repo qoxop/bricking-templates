@@ -1,11 +1,15 @@
 {
   "scripts": {
-    "add-module": "bricking create module",
-    "add-base": "bricking create base"
+    "add-module": "bricking create module -cwd ./packages/module",
+    "add-base": "bricking create base -cwd ./packages/base",
+    "prerelease": "pnpm install",
+    "release": "node ./script/build.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bricking": "0.4.3"
+    "bricking": "0.4.3",
+    "dotenv": "^16.0.2",
+    "fs-extra": "^10.1.0"
   }
 }
