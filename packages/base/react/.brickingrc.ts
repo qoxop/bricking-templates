@@ -2,8 +2,8 @@ import { updateOptions } from '@bricking/base-builder';
 
 const isProdMode = process.env.NODE_ENV === 'production';
 
-const { name, version } = require('./package.json');
-const publicPath = isProdMode ? `http://files.qoxop.run/packages/${name}/${version}/` : 'http://locahost:8080/';
+const { name } = require('./package.json');
+const publicPath = isProdMode ? `https://vercel.bricking.dev/base/${name}` : 'http://locahost:8080/';
 
 export default updateOptions({
   publicPath,
