@@ -1,0 +1,18 @@
+{
+  "base": [
+    {
+      "name": "react-base",
+      "git": "git@github.com:qoxop/bricking-templates.git",
+      "branch": "release",
+      "source": "bricking-templates/packages/base/react"
+    }
+  ],
+  "module": [
+    {
+      "name": "react-micro",
+      "git": "git@github.com:qoxop/bricking-templates.git",
+      "branch": "release",
+      "source": "bricking-templates/packages/module/react-micro"
+    }
+  ]
+}

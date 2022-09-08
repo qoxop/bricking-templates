@@ -37,3 +37,7 @@ fs.readdirSync(ModulePackagesPath, 'utf-8').map(dir => path.join(ModulePackagesP
     console.warn('package.json no exists ~!');
   }
 })
+fs.copyFileSync(
+  path.join(process.cwd(), './templates.json'),
+  path.join(process.cwd(), './dist/templates.json'),
+)
